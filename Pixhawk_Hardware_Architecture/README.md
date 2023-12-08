@@ -1,12 +1,12 @@
 ## Pixhawk Hardware Architecture (courtesy Auterion)
-https://github.com/pixhawk/Hardware
+* [Pixhawk Hardware Architecture](https://github.com/pixhawk/Hardware)
 
 Let us cut the chase/come to the point and do some real work!
 
 The architecture of the whole drone (very high view level) is
 shown on the Cyberphysical-Architecture-v3-Full.png picture.
 
-https://github.com/ZoranStojsavljevic/UAV_State_of_Affairs/blob/main/Pixhawk_Hardware_Architecture/Cyberphysical-Architecture-v3-Full.png
+* [Cyberphysical Architecture V3](https://github.com/ZoranStojsavljevic/UAV_State_of_Affairs/blob/main/Pixhawk_Hardware_Architecture/Cyberphysical-Architecture-v3-Full.png)
 
 ![](Cyberphysical-Architecture-v3-Full.png)
 
@@ -17,14 +17,13 @@ are working alltogether!
 
 It is extracted from Hardware repo (courtesy Auterion):
 
-https://github.com/pixhawk/Hardware
-
-https://github.com/pixhawk/Hardware/blob/master/FMUv3_REV_D/Schematic%20Print/Schematic%20Prints.PDF
+* [Pixawk HW](https://github.com/pixhawk/Hardware)
+* [Pixawk HW Schematic](https://github.com/pixhawk/Hardware/blob/master/FMUv3_REV_D/Schematic%20Print/Schematic%20Prints.PDF)
 
 It is given as Pixhawk_Schematic_Prints.pdf in here (copied
 from the original site):
 
-https://github.com/ZoranStojsavljevic/UAV_State_of_Affairs/blob/main/Pixhawk_Hardware_Architecture/Pixhawk_Schematic_Prints.pdf
+* [Local Pixawk HW Schematic](https://github.com/ZoranStojsavljevic/UAV_State_of_Affairs/blob/main/Pixhawk_Hardware_Architecture/Pixhawk_Schematic_Prints.pdf)
 
 There are two major driving elements from the HW schematics.
 
@@ -45,10 +44,13 @@ Cortex-M4 core with DSP and FPU, 512 Kbytes of Flash memory,
 The data sheet of it is included in this directory:
 stm32f407ve.pdf
 
-There is other component called MPU-6000.
+There is other component called MPU-6000 (more general: MPU-60X0).
 
 The data sheet of it is included in this directory:
-MPU-60X0-Datasheet1.pdf
+MPU-6000-Datasheet1.pdf .
+
+MPU-6000-Register-Map1.pdf is also included in this directory. It
+is a MPU-6000 registers' guide (MPU-6000 registers' description).
 
 What is MPU-60X0?
 
@@ -85,9 +87,9 @@ is an MMU based silicon, thus it is capable of running embedded
 Linux. This one is for controlling LIDAR and nowadays 3D cameras.
 Why Linux? Linux as by the architecture and capabilities is able
 to run such complex LIDAR (Laser Imaging, Detection, And Ranging)
-drivers (sometimes > 100K lines of kernel code).
+drivers (estimated > 100K lines of device drivers' code).
 
-https://en.wikipedia.org/wiki/Lidar
+* [LIDAR](https://en.wikipedia.org/wiki/Lidar)
 
 #### Communication Protocol between Pixhawk HW and Odroid
 
@@ -98,7 +100,7 @@ Can you tell which one is used? By reading carefully this repo?
 
 Yes, this is MAVLink messaging protocol.
 
-https://mavlink.io/en/
+* [MavLink Protocol](https://mavlink.io/en/)
 
 MAVLink is a very lightweight messaging protocol for communicating
 with drones (and between onboard drone components).
